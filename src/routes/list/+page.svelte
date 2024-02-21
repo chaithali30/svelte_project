@@ -154,12 +154,11 @@
 <!-- title -->
 <div class="text-center p-2">
 	<h1 class="font-bold text-4xl mb-4">Shopping Cart</h1>
-	<h1 class="text-3xl">Products</h1>
 </div>
 
 <div class="flex justify-end w-full">
 	<button
-		class="border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 my-2 mx-16 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline"
+		class="border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 my-2 mx-4 md:mx-16 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline"
 		on:click={onCreate}
 	>
 		Create</button
@@ -169,14 +168,14 @@
 <div class="my-2 mx-16">
 	<h1 class="text-2xl font-bold">Search/Filter</h1>
 	<input
-		class="w-full h-12 outline-sky-600 shadow-lg p-5 shadow-neutral-200 rounded-lg border"
+		class="w-full h-12 outline-sky-600 shadow-lg my-4 p-5 shadow-neutral-200 rounded-lg border"
 		type="search"
 		placeholder="Search..."
 		bind:value={searchValue}
 	/>
 </div>
 
-<div class="p-4 m-8">
+<div class="mx-0 my-10 md:mx-8">
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 		{#if paginatedItems}
 			{#each paginatedItems as item}

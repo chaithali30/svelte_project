@@ -77,7 +77,7 @@
 			</div>
 			<div class="mt-2 text-gray-700 text-right text-xs">
 				by
-				<a href="https://digitalprizm.net/" class="hover:underline" target="_blank">Digital Prizm</a>
+				<a href="/" class="hover:underline" target="_blank">Chaithali Gowda R</a>
 			</div>
 		</form>
 	</div>

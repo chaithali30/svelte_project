@@ -110,7 +110,7 @@
 <div class="p-4">
 	<div class="flex justify-end w-full">
 		<button
-			class="border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-10 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline"
+			class="border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 my-4 md:m-10 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline"
 			on:click={child.show}>Create</button
 		>
 	</div>
@@ -208,27 +208,27 @@
 			</div>
 		</div>
 	</Hidden>
-	<div class="p-4 m-8">
+	<div class="m-0 md:m-8">
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 			{#each notes as note}
 				<div
 					class="border p-5 rounded-lg hover:transition hover:duration-700  transform hover:scale-105"
 				>
 					<button
-						class="py-2 px-4 shadow-md no-underline rounded-full bg-orange-600 text-white font-sans font-semibold text-sm border-orange-100 hover:text-white hover:bg-orange-light focus:outline-none active:shadow-none mr-2"
+						class="py-2 px-4 my-2 shadow-md no-underline rounded-full bg-orange-600 text-white font-sans font-semibold text-sm border-orange-100 hover:text-white hover:bg-orange-light focus:outline-none active:shadow-none mr-2"
 						>{note.category}</button
 					>
-					<h5 class="text-2xl font-bold">{note.title}</h5>
-					<p class="text-lg">{note.content}</p>
+					<h5 class="text-2xl mb-2 font-bold">{note.title}</h5>
+					<p class="text-lg mb-2">{note.content}</p>
 					<button
 						on:click={child.show}
-						class="border border-gray-700 bg-gray-700 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease-in-out select-none hover:bg-gray-800 focus:outline-none focus:shadow-outline"
+						class="border border-gray-700 bg-gray-700 text-white rounded-md px-4 py-2 m-0 md:m-2 transition duration-500 ease-in-out select-none hover:bg-gray-800 focus:outline-none focus:shadow-outline"
 						on:click={editNote(note)}
 					>
 						Edit
 					</button>
 					<button
-						class="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
+						class="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-0 md:m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
 						on:click={deleteNote(note.id)}
 					>
 						Delete

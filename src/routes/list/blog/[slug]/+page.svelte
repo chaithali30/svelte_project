@@ -15,8 +15,31 @@
 
 <div class="w-full pt-2 md:w-96 md:max-w-full mx-auto shadow-md">
 	<div class="p-4 border border-gray-300 sm:rounded-md bg-[#99b3b2]">
-		
-		<div class="p-5">
+		<a href="/list">
+		<svg
+		width="24" height="24"
+		xmlns="http://www.w3.org/2000/svg"
+		stroke="currentColor"
+		viewBox="0 0 24 24"
+		fill="none"
+	>
+		<path
+			d="M19 12H5"
+			stroke="#221E1F"
+			stroke-width="2.5"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+		/>
+		<path
+			d="M12 19L5 12L12 5"
+			stroke="#221E1F"
+			stroke-width="2.5"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+		/>
+	</svg>
+	</a>
+		<div class="">
 			{#if data}
 				<p class="text-lg mt-2">{data.id}</p>
 				<p class="text-2xl mt-2">{data.brand}</p>
