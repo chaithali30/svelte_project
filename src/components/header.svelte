@@ -23,7 +23,7 @@ console.log("child");
 	class=" bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400">
 	<slot/>
 	<div class="container flex flex-wrap items-center justify-between mx-auto">
-		<a href="#" class="flex items-center">
+		<a href="/" class="flex items-center">
 			<img src="https://cdn3d.iconscout.com/3d/free/thumb/svelte-5562376-4642721.png" class="h-6 mr-3 sm:h-9" alt="svelte Logo" />
 			<span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
 				>{title}</span>
@@ -158,7 +158,7 @@ console.log("child");
 					<li
 						class="flex w-full justify-between text-gray-300 hover:text-gray-500 cursor-pointer items-center mb-6"
 					>
-						<a href="#" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white">
+						<a href="/" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-grid"
@@ -183,7 +183,7 @@ console.log("child");
 					<li
 						class="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6"
 					>
-						<a href="#" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white">
+						<a href="/" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-puzzle"
@@ -207,7 +207,7 @@ console.log("child");
 					<li
 						class="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6"
 					>
-						<a href="#" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white">
+						<a href="/" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-compass"
@@ -230,7 +230,7 @@ console.log("child");
 					<li
 						class="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6"
 					>
-						<a href="#" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white">
+						<a href="/" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-code"
@@ -254,7 +254,7 @@ console.log("child");
 					<li
 						class="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6"
 					>
-						<a href="#" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white">
+						<a href="/" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-puzzle"
@@ -278,7 +278,7 @@ console.log("child");
 					<li
 						class="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6"
 					>
-						<a href="#" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white">
+						<a href="/" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-stack"
@@ -302,7 +302,7 @@ console.log("child");
 					<li
 						class="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center"
 					>
-						<a href="#" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white">
+						<a href="/" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-settings"
