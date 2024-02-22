@@ -263,11 +263,11 @@
 
 <!-- sidebar -->
 
-<div class="w-full h-full ">
-	<div id="mySidebar" class="flex flex-no-wrap">
+<div class="flex">
+
+		<aside class="h-screen sticky top-0">
 		<div
-			
-			class=" absolute sm:relative {mini===true ?"bg-gray-800 w-16 hidden":"bg-gray-800 w-64"} shadow md:h-full flex-col justify-between  sm:flex">
+			class="h-screen sticky top-0 overflow-hidden sm:relative {mini===true ?"bg-gray-800 w-16 hidden":"bg-gray-800 w-64"} shadow md:h-full flex-col justify-between  sm:flex">
 			<div class="px-8">
 				<div class="h-16 w-full flex items-center">
 					<svg
@@ -453,35 +453,8 @@
 						</a>
 					</li>
 				</ul>
-				<div class="flex justify-center mt-48 mb-4 w-full">
-					<div class="relative">
-						<div class="text-gray-300 absolute ml-4 inset-0 m-auto w-4 h-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="icon icon-tabler icon-tabler-search"
-								width="16"
-								height="16"
-								viewBox="0 0 24 24"
-								stroke-width="1.5"
-								stroke="currentColor"
-								fill="none"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							>
-								<path stroke="none" d="M0 0h24v24H0z" />
-								<circle cx="10" cy="10" r="7" />
-								<line x1="21" y1="21" x2="15" y2="15" />
-							</svg>
-						</div>
-						<input
-							class="focus:outline-none focus:ring-1 focus:ring-gray-100 rounded w-full text-sm text-gray-300 placeholder-gray-400 bg-gray-100 pl-10 py-2"
-							type="text"
-							placeholder="Search"
-						/>
-					</div>
-				</div>
 			</div>
-			<div class="px-8 border-t border-gray-700">
+			<!-- <div class="px-8 border-t border-gray-700">
 				<ul class="w-full flex items-center justify-between bg-gray-800">
 					<li class="cursor-pointer text-white pt-5 pb-3">
 						<button
@@ -511,9 +484,15 @@
 						</button>
 					</li>
 				</ul>
+			</div> -->
+			<div class="px-4 py-4 border-t border-gray-700">
+				<label class="inline-flex items-center cursor-pointer">
+					<input type="checkbox" value="" class="sr-only peer" on:click={toggleSidebar}>
+					<div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+				</label>
 			</div>
 		</div>
-
+		</aside>
 		<!-- mobile view -->
 		<!-- <div 
 			class="w-64 z-40 absolute bg-gray-800 shadow md:h-full flex-col justify-between sm:hidden transition duration-150 ease-in-out"
@@ -818,161 +797,135 @@
 		</div> -->
 
 <!-- main content -->
-
-		<div id="main" class="container mx-auto py-10 w-full px-6 ">
-			<div class="w-full h-full rounded border-dashed border-2 border-gray-300">
-				<main class="flex-1 mt-30 pl-4">
-					<!-- <button id="counter" on:click={addToCounter}>{x}</button> -->
-
-					<!-- <h1 class="text-2xl font-bold text-center pt-4 pb-2">Shop</h1> -->
-
-					<!-- <div class="p-4 m-8">
-						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-							{#if response}
-								{#each response as t}
-									<div
-										class="border p-5 rounded-lg hover:transition hover:duration-700  transform hover:scale-105"
-									>
-										<img class="h-80 w-full object-cover rounded-t-xl" src={t.image} alt={t.tittle} />
-										<div>
-											<button
-												class="py-2 px-4 m-4 shadow-md no-underline rounded-full bg-orange-600 text-white font-sans font-semibold text-sm border-orange-100 hover:text-white hover:bg-orange-light focus:outline-none active:shadow-none"
-												>{t.id}</button
-											>
-											<span class="text-lg text-right text-gray-700 leading-none"> {t.title}</span>
-										</div>
-									</div>
-								{/each}
+		<main>
+			<div class="p-4">
+				<!-- <div class="w-full h-full rounded border-dashed border-2 border-gray-300"> -->
+					<!-- <main class="flex-1 mt-30 pl-4"> -->
+						<div class="m-2">
+							<button
+								type="button"
+								class="border border-collapse rounded-lg bg-purple-500 p-2"
+								on:click={openModule}>Modal</button
+							>
+							{#if btn}
+								<div
+									class="container border-gray-800 border border-collapse m-2"
+									on:click={onKeydown}
+								>
+									<a href="/">logout</a><br />
+									<a href="/">Action</a><br />
+									<a href="/">Something else</a>
+								</div>
 							{/if}
 						</div>
-					</div> -->
-					<div class="m-2">
-						<button
-							type="button"
-							class="border border-collapse rounded-lg bg-purple-500 p-2"
-							on:click={openModule}>Modal</button
-						>
-						{#if btn}
-							<div
-								class="container border-gray-800 border border-collapse m-2"
-								on:click={onKeydown}
-							>
-								<a href="/">logout</a><br />
-								<a href="/">Action</a><br />
-								<a href="/">Something else</a>
-							</div>
+
+						<input on:focus={onFocus} class="border border-collapse m-2" />
+						{#if isFocused}
+							<p>Input has focus</p>
+						{:else}
+							<p>Input does not have focus</p>
 						{/if}
-					</div>
 
-					<input on:focus={onFocus} class="border border-collapse m-2" />
-					{#if isFocused}
-						<p>Input has focus</p>
-					{:else}
-						<p>Input does not have focus</p>
-					{/if}
+						<!-- age calculator -->
 
-					<!-- age calculator -->
+						<form on:submit={handleSubmit}>
+							<Flatpickr
+								{options}
+								bind:value
+								bind:formattedValue
+								on:change={handleChange}
+								name="date"
+								class="border border-collapse m-2"
+							/>
 
-					<form on:submit={handleSubmit}>
-						<Flatpickr
-							{options}
-							bind:value
-							bind:formattedValue
-							on:change={handleChange}
-							name="date"
-							class="border border-collapse m-2"
-						/>
+							<button type="submit"> Submit </button>
+						</form>
 
-						<button type="submit"> Submit </button>
-					</form>
+						<!-- form create and delete -->
+						<form action="" on:submit={handleCreate}>
+							<div class="p-5">
+								{#each fields as f}
+									<input
+										type="text"
+										placeholder="Enter text"
+										class="mx-5 rounded-lg"
+										bind:value={f.title}
+									/>
+									<input
+										type="text"
+										placeholder="Enter text"
+										class="mx-5 rounded-lg"
+										bind:value={f.description}
+									/>
+									<button
+										type="button"
+										class="mx-5 bg-white hover:bg-gray-200 p-1 hover:outline rounded-full w-8 h-8 text-center top-5 text-lg cursor-pointer right-6"
+										on:click={() => handleDelete(f.id)}>X</button
+									>
+								{/each}
+							</div>
+						</form>
+						<div class="">
+							<button
+								type="submit"
+								class="bg-blue-800 text-white rounded-lg p-3 mx-5 top-5 text-lg cursor-pointer right-6"
+								on:click={() => handleCreate()}>Create</button
+							>
+						</div>
 
-					<!-- form create and delete -->
-					<form action="" on:submit={handleCreate}>
-						<div class="p-5">
-							{#each fields as f}
-								<input
-									type="text"
-									placeholder="Enter text"
-									class="mx-5 rounded-lg"
-									bind:value={f.title}
-								/>
-								<input
-									type="text"
-									placeholder="Enter text"
-									class="mx-5 rounded-lg"
-									bind:value={f.description}
-								/>
+						<input type="number" class="bg-transparent border border-collapse m-2" bind:value={num} />
+
+						<form action="" class="">
+							{#each formData as f, index}
+								<label
+									>f{index + 1}
+									<input
+										bind:value={f.name}
+										placeholder="name"
+										type="text"
+										class="bg-transparent border border-collapse"
+									/>
+								</label>
 								<button
 									type="button"
 									class="mx-5 bg-white hover:bg-gray-200 p-1 hover:outline rounded-full w-8 h-8 text-center top-5 text-lg cursor-pointer right-6"
-									on:click={() => handleDelete(f.id)}>X</button
+									on:click={() => handleDelete1(f.formData)}>X</button
 								>
 							{/each}
-						</div>
-					</form>
-					<div class="">
-						<button
-							type="submit"
-							class="bg-blue-800 text-white rounded-lg p-3 mx-5 top-5 text-lg cursor-pointer right-6"
-							on:click={() => handleCreate()}>Create</button
-						>
-					</div>
+						</form>
 
-					<input type="number" class="bg-transparent border border-collapse m-2" bind:value={num} />
+						<!-- ternary operator example -->
+						<p class="{ternary === true ? 'text-white bg-green-400' : 'text-white bg-red-400'} m-2">
+							{ternary === true ? 'active' : 'inactive'}
+						</p>
 
-					<form action="" class="">
-						{#each formData as f, index}
-							<label
-								>f{index + 1}
-								<input
-									bind:value={f.name}
-									placeholder="name"
-									type="text"
-									class="bg-transparent border border-collapse"
-								/>
-							</label>
-							<button
-								type="button"
-								class="mx-5 bg-white hover:bg-gray-200 p-1 hover:outline rounded-full w-8 h-8 text-center top-5 text-lg cursor-pointer right-6"
-								on:click={() => handleDelete1(f.formData)}>X</button
-							>
+						{#each array as car}
+							<div>{car.location}</div>
+							<div>{car.location_id}</div>
+							{#each Object.entries(car.parts) as [key, value]}
+								<div>
+									{key}{value}
+									<!-- {detail.part_id}: {detail.description} -->
+								</div>
+							{/each}
 						{/each}
-					</form>
 
-					<!-- ternary operator example -->
-					<p class="{ternary === true ? 'text-white bg-green-400' : 'text-white bg-red-400'} m-2">
-						{ternary === true ? 'active' : 'inactive'}
-					</p>
+						{age}
 
-					{#each array as car}
-						<div>{car.location}</div>
-						<div>{car.location_id}</div>
-						{#each Object.entries(car.parts) as [key, value]}
-							<div>
-								{key}{value}
-								<!-- {detail.part_id}: {detail.description} -->
-							</div>
+						{#each arrayOfArray as list}
+							<div>{list.location}</div>
+							<div>{list.location_id}</div>
+							{#each list.parts as details}
+								<div>{details.part_id}</div>
+								<div>{details.description}</div>
+							{/each}
 						{/each}
-					{/each}
 
-					{age}
-
-					{#each arrayOfArray as list}
-						<div>{list.location}</div>
-						<div>{list.location_id}</div>
-						{#each list.parts as details}
-							<div>{details.part_id}</div>
-							<div>{details.description}</div>
-						{/each}
-					{/each}
-
-					{result}
-				</main>
+						{result}
+					<!-- </main> -->
+				<!-- </div> -->
 			</div>
-		</div>
-	</div>
-	
-
+		</main>
 </div>
 <!-- <Header /> -->
 <svelte:window on:mousedown={handleKey} />
